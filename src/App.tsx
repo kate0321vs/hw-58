@@ -5,12 +5,18 @@ import { useState } from 'react';
 
 const App = () => {
 
-  const [showModal, setShowModal] = useState<boolean>(true);
+  const [showModal, setShowModal] = useState<boolean>(false);
 
 return (
   <>
-    <Modal show={showModal} title="custtttoooom title" onClose={() => setShowModal(true)}
-    >Hello</Modal>
+    <button
+      className="btn btn-primary mt-3 ms-3"
+      onClick={() => setShowModal(!showModal)}>
+      Custom Modal
+    </button>
+
+    <Modal show={showModal} title="Some kinda modal title" onClose={() => setShowModal(false)}
+    >This is modal content</Modal>
   </>
 );
 }

@@ -30,7 +30,7 @@ const Modal: React.FC<Props> = ({show = true, title = 'Custom title', onClose, c
                 >X
                 </button>
             </div>
-            <div className="p-3">
+            <div className="p-3 mt-2 mb-2">
               {children}
             </div>
 
